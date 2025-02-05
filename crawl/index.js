@@ -5,7 +5,7 @@ const path = require('path');
 
 const BASE_DOMAIN = "https://da.live";
 const BASE_URL = "https://da.live/docs";
-const OUTPUT_FILE = path.join(__dirname, 'data', 'da_live_docs.json');
+const OUTPUT_FILE = path.join(__dirname, '..', 'data', 'da_live_docs.json');
 const VISITED = new Set();  // To track visited URLs
 const DOCS = [];  // To store scraped data
 
@@ -109,4 +109,6 @@ async function startCrawl() {
     console.log(`Scraped data saved to ${OUTPUT_FILE}`);
 }
 
-startCrawl();
+// startCrawl();
+
+module.exports = { startCrawl };
